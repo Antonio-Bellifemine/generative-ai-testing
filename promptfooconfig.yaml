@@ -1,28 +1,21 @@
 # Learn more about building a configuration: https://promptfoo.dev/docs/configuration/guide
 description: "Summarization-Testing"
-
+# apiKey: ${OPENAI_API_KEY}
 prompts:
-  - "Summarize {{topic}}"
+  - "Summarize this story file:./articles/stellas.cosmic.adventure.txt"
 
-providers:
-  - "openai:gpt-4o"
+providers: [ollama:chat:llama3:8b]
   
-
 tests:
-  - vars:
-      article: ./articles/stellas.cosmic.adventure.txt
+  - id: test_summarization_fail
     assert:
       - type: not-contains
         value: AI language model
-
-  #     # Prefer shorter outputs
-  #     - type: javascript
-  #       value: 1 / (output.length + 1)
-
-  - vars:
-      topic: [stellas.cosmic.adventure.txt]
-    assert:
-      # For more information on model-graded evals, see https://promptfoo.dev/docs/configuration/expected-outputs/model-graded
-      - type: llm-rubric
-        value: ensure that the output contains the main character stella and the planets Mars & Jupiter. There should also be a character named Cosmo
-
+      - type: contains-all
+        value:
+          - "Stella"
+          - "Mars"
+          - "Jupiter"
+          - "Cosmo"
+      - type: contains
+        value: "fughettaboutit"
