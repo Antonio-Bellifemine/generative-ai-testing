@@ -1,37 +1,28 @@
 # Learn more about building a configuration: https://promptfoo.dev/docs/configuration/guide
-description: "My eval"
+description: "Summarization-Testing"
 
 prompts:
-  - "Write a tweet about {{topic}}"
-  - "Write a concise, funny tweet about {{topic}}"
-  
+  - "Summarize {{topic}}"
 
 providers:
-  - "openai:gpt-3.5-turbo"
   - "openai:gpt-4o"
   
 
 tests:
   - vars:
-      topic: bananas
-
-  - vars:
-      topic: avocado toast
+      article: ./articles/stellas.cosmic.adventure.txt
     assert:
-      # For more information on assertions, see https://promptfoo.dev/docs/configuration/expected-outputs
+      - type: not-contains
+        value: AI language model
 
-      # Make sure output contains the word "avocado"
-      - type: icontains
-        value: avocado
-
-      # Prefer shorter outputs
-      - type: javascript
-        value: 1 / (output.length + 1)
+  #     # Prefer shorter outputs
+  #     - type: javascript
+  #       value: 1 / (output.length + 1)
 
   - vars:
-      topic: new york city
+      topic: [stellas.cosmic.adventure.txt]
     assert:
       # For more information on model-graded evals, see https://promptfoo.dev/docs/configuration/expected-outputs/model-graded
       - type: llm-rubric
-        value: ensure that the output is funny
+        value: ensure that the output contains the main character stella and the planets Mars & Jupiter. There should also be a character named Cosmo
 

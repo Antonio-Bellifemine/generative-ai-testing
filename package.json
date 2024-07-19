@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@dotenvx/dotenvx": "^1.6.4",
     "promptfoo": "^0.68.2"
   }
 }
