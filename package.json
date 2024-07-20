@@ -1,5 +1,5 @@
 {
-  "name": "llm-eval-demo",
+  "name": "generative-ai-testing",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "run:open:web:ui": "docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main"
   },
   "keywords": [],
-  "author": "",
+  "author": "Antonio Bellifemine",
   "license": "ISC",
   "dependencies": {
     "@dotenvx/dotenvx": "^1.6.4",
