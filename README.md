@@ -1,12 +1,16 @@
-To get started, set your OPENAI_API_KEY environment variable, or other required keys for the providers you selected.
+# Getting Started With Gen Ai Testing
+---
+##### 1. 🐋download or start docker desktop🐋
+- Pull any LLM model(s) image(s) you need or would like to test with
 
-Next, edit or create the apprpriate promptfooconfig.yaml.
+##### 2. set your OPENAI_API_KEY 🗝️ environment variable, or other required keys for the providers you selected in a .env file
 
-cd into the directory you want to run the tests
+##### 3. cd into the directory you want to run the tests 📂
+
 Then run:
 ```
-promptfoo eval
+npx promptfoo eval
 ```
 
 Afterwards, you can view the results by running `promptfoo view`
-"# promptfoo-llm-evaluator" 
+

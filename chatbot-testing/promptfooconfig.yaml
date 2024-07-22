@@ -1,0 +1,16 @@
+prompts:
+
+providers: [ollama:chat:llama3:8b]
+tests:
+  - vars:
+      query: What is the max purchase that doesn't require approval?
+      context: file://path/to/file
+    assert:
+      - type:
+        value:
+  - vars:
+      query:
+      context:
+    assert:
+      - type:
+        value:
