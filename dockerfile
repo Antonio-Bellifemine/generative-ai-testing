@@ -11,3 +11,5 @@ COPY . .
 
 # Install the dependencies
 RUN npm install
+
+CMD ["tail", "-f", "/dev/null"]

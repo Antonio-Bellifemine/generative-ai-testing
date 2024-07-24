@@ -1,0 +1,16 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - model
+    environment:
+      NODE_ENV: development
+
+  model:
+    image: ollama/ollama # Use the official Ollama image
+    ports:
+      - "11434:11434"
+    environment:
+      MODEL_ENV: development

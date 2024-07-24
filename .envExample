@@ -1,1 +1,4 @@
+these are the env dependencies that are needed to run this framework. the actual env vars are ignored for security
+
 OPENAI_API_KEY
+OLLAMA_BASE_URL
