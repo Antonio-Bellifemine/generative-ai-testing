@@ -1,0 +1,9 @@
+  - vars: 
+      stellasStory: file://stellas.cosmic.adventure.txt
+    assert:
+      - type: not-contains
+        value: AI language model
+      - type: contains-all
+        value: ["Stella", "Mars", "Jupiter", "Cosmo", "stars", "telescope"]
+      - type: not-contains
+        value: "black hole"
