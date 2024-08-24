@@ -1,16 +1,6 @@
 # Learn more about building a configuration: https://promptfoo.dev/docs/configuration/guide
 description: "Summarization-Testing"
 # apiKey: ${OPENAI_API_KEY}
-prompts:
-  - "explain this story to a child in 1000 characters or less. Include all of the characters and places they visit or see {{stellasStory}}"
+prompts: prompt.txt
 providers: [ollama:chat:llama3:8b]
-tests:
-  - vars: 
-      stellasStory: file://prompts/stellas.cosmic.adventure.txt
-    assert:
-      - type: not-contains
-        value: AI language model
-      - type: contains-all
-        value: ["Stella", "Mars", "Jupiter", "Cosmo", "stars", "telescope"]
-      - type: not-contains
-        value: "black hole"
+tests: tests*.yaml
