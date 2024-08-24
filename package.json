@@ -7,8 +7,7 @@
     "test:summarization:prompts": "cd summarization-testing && npx promptfoo eval promptfooconfig.yaml && npx promptfoo view",
     "test:rag:prompts": "cd rag-testing && npx promptfoo eval promptfooconfig.yaml && npx promptfoo view",
     "start:ollama": "docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama",
-    "run:open:web:ui": "docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main",
-    "clear:run:result:local:db": "node deleteLocalRunResultDb.js"
+    "run:open:web:ui": "docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main"
   },
   "keywords": [],
   "author": "Antonio Bellifemine",
