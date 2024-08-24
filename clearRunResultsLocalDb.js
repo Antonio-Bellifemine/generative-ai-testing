@@ -1,6 +1,12 @@
 const { exec } = require('child_process');
+const path = require('path');
+const os = require('os');
 
-const filePath = "C:\\Users\\abell\\.promptfoo\\promptfoo.db";
+// Get the user's home directory
+const homeDir = os.homedir();
+
+// Construct the full file path dynamically
+const filePath = path.join(homeDir, '.promptfoo', 'promptfoo.db');
 
 // Command to delete the file
 const command = `del /f "${filePath}"`;
