@@ -20,5 +20,5 @@ exec(command, (error, stdout, stderr) => {
     console.error(`Error: ${stderr}`);
     return;
   }
-  console.log(`File deleted successfully: ${stdout}`);
+  console.log(`promptfoo run results localdb deleted successfully: ${stdout}`);
 });
