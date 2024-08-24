@@ -1,4 +1,5 @@
 description: "rag-testing"
 prompts: prompts/prompt1.txt
-providers: [ollama:chat:llama3:8b]
+# Provider ollama:chat:llama3:8b is not a valid embedding provider for 'answer relevancy check', will fall back to default: Open API (needs api kley to run)
+providers: [ollama:chat:llama3:8b] 
 tests: tests*.yaml
