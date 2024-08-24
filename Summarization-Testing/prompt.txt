@@ -1,0 +1,1 @@
+explain this story to a child in 1000 characters or less. Include all of the characters and places they visit or see {{stellasStory}}
